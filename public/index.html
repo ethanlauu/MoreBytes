@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="background_styles.css">
+      <link rel="stylesheet" href="navbar_styles.css">
+      <link rel="stylesheet" href="page_styles.css">
+      <link rel="stylesheet" href="page_about.css">
+      <link rel="stylesheet" href="page_donate.css">
+      <link rel="stylesheet" href="page_home.css">
+      <link rel="stylesheet" href="style.css">
+
+      <link rel="icon" type="image/x-icon" href="Screen_Shot_2023-10-15_at_1.19.18_PM (1) (1).png">
+
+      <script src="script.js" defer></script>
+      <title>MoreBytes</title>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script>
+        function initGoogleSignIn() {
+          gapi.load('auth2', function() {
+            gapi.auth2.init({
+              client_id: '178239916627-e2h6785bngsefq4otgprs15ghqbgumro.apps.googleusercontent.com',
+            });
+          });
+        }
+      </script>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <script>
+        function onSignIn(googleUser) {
+           // Get basic user information
+           var profile = googleUser.getBasicProfile();
+           
+           // Access user details
+           var userId = profile.getId();          // Unique Google ID for the user
+           var userName = profile.getName();       // User's name
+           var userImage = profile.getImageUrl();  // User's profile picture URL
+           var userEmail = profile.getEmail();     // User's email (if requested during setup)
+        
+           // Access the ID token for server-side verification (recommended)
+           var idToken = googleUser.getAuthResponse().id_token;
+           
+           // You can use this information for your application's logic.
+           // For example, you can display the user's name and profile picture.
+           
+           // Example: Display user's name and image in an HTML element
+           var userInfoElement = document.getElementById('user-info');
+           userInfoElement.innerHTML = 'Welcome, ' + userName + '<br>';
+           userInfoElement.innerHTML += '<img src="' + userImage + '" alt="User Profile Picture">';
+           
+           // You can also send the ID token to your server for verification if needed.
+           // Example: Send ID token to the server using AJAX
+           /*
+           $.ajax({
+             url: '/your-server-endpoint',
+             method: 'POST',
+             data: { idToken: idToken },
+             success: function(response) {
+               console.log('ID token sent to server and verified.');
+             },
+             error: function(error) {
+               console.error('ID token verification failed.');
+             }
+           });
+           */
+        }
+        <a href="#" onclick="signOut();">Sign out</a>
+
+
+        </script>
+        
+        <script>
+          function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+              console.log('User signed out.');
+            });
+          }
+        </script>
+
+    </head>
+    <body>
+      <nav class="navbar">
+
+        <div class="brand-title"><a href="index.html"><img src="Screen_Shot_2023-10-15_at_1.19.18_PM (1) (1).png" /></a></div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <!-- <li><a href="#">Home</a></li> -->
+            <li class="greeting"><script src="js/home.js" defer></script></li>
+            <li><a href="index.html">HOME</a></li>
+            <button href = "foodpost.html"><a href="foodpost.html">POST</a></button>
+            <button href = "foodpost.html"><a href="foodpost.html">TEST</a></button>
+           
+            <button href = "example.html"><a href="example.html">REQUEST</a></button>
+            <button class="logout">LOGOUT <script src="js/home.js" defer></script></button>
+
+          </ul>
+
+        </div>
+      </nav>
+
+       <!--  <div class="container">
+            <button class="logout">log out</button>
+            <h1 class="greeting"></h1>
+        </div>
+    
+        <script src="js/home.js"></script>
+       -->
+
+
+
+
+    <div class="page_home">
+      <div class="home_picture"><img src="food-sharing.jpeg" /></div>
+      <div class="home_picture_text"><h1> WELCOME TO MOREBYTES</h1></div>
+      <div class="home_arrow"><a href="#page_about"><div></div></a></div>
+    </div>
+
+    <div class="page_about">
+      <h1>
+        MoreBytes
+      </h1>
+    <h2>
+        Your local food sharing page, based in the Bay Area. 
+    </h2>
+    <p>
+    <p1>
+      MoreBytes was inspired by a pressing issue we observed in our community, the Bay Area, where a stark contrast between food waste in affluent areas and food insecurity in less fortunate neighborhoods was evident. In areas with high concentrations of wealth, food purchases are skyrocketing but consumption does not follow suit. As a result, food waste is a common practice in almost every household, caused by a lack of alternatives and lack of financial need, especially in areas like Fremont. On the flip side, in less fortunate areas, thousands of people lack access to food, and have no way to do so. We, at MoreBytes, aim to build the bridge between those living miles down the road from those who need food, eliminating the barrier that was set before. We hope to reduce food waste and reallocate this food to those who need it the most. 
+
+         <br><br> 
+    </p1>  
+    <p2>
+      To find food items near you, go to this page:
+      <button id = "aboutButton" href = "example.html"><a href="example.html">REQUEST</a></button>
+         <br> <br>
+    </p2>
+    <p3> 
+      To post a food item onto our database, go to this page:
+      <button><a id = "aboutButton2" href="contact.html">POST</a></button>
+         <br> <br>
+    </p3>
+    <p4>        
+         <br> <br>
+    </p4>
+    <p5>
+         <br> <br>
+    </p5>
+    </p>
+
+    </body>
+        
+    </div>
+    <form action="action_page.php" method="post">
+      <div class="imgcontainer">
+        <img src="Screen Shot 2023-10-15 at 1.19.18 PM.png" alt="Avatar" class="avatar">
+      </div>
+    
+      
+    <footer class="footer">
+      <p>MoreBytes</p>
+    </footer>
+     
+</html>

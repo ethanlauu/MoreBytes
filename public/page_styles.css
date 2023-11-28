@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Montserrat:wght@600&family=Open+Sans:wght@500&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.page_home {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+
+.page_about h1, h2{
+    text-align: center;
+    margin:0;
+    color: black;
+}
+.page_about p1, p2, p3{
+    text-align: center;
+    margin:0;
+    color: black;
+}
+
+.page_about h1{
+    padding-top: 15px
+}
+
+.page_about h2{
+    padding-top:3px
+}
+
+.page_about p{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.donate_paypal{
+    padding:15px;
+}
+
+.home_picture img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0.8;
+    filter: brightness(25%);
+    position: relative;
+}
+
+.home_picture img {
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.home_picture_text{
+    font-family: 'Open Sans'; 
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.home_arrow {
+    /* background: white; */
+    height: 50px;
+    width: 50px;
+    border-radius: 50px; 
+    margin: 15px;
+    transition: 0.4s ease;
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+.home_arrow div {
+    position: absolute;
+    transition: 0.4s ease;
+    height: 40px;
+    width: 40px;
+    border-top: 3px solid rgb(255, 252, 252);
+    border-left: 3px solid rgb(255, 255, 255);
+    transform: rotate(225deg);
+    left: 6px;
+    top: 0px;
+    
+}
+
+.home_arrow div:hover {
+    border-color: rgb(197, 197, 197);
+    /* box-shadow: 0px 0px 3px 3px rgb(221, 221, 221); */
+}
+
+footer {
+    background-color: #333;
+    background-color: rgba(44, 44, 44, 0.7);
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto; 
+    font-family: 'Open Sans';
+    color: white;
+    transition: transform 0.4s;
+    font-size: 25px;
+    box-shadow: 0 0 20px 0 rgb(25, 9, 0);
+  }
+
+.footer--hidden {
+    transform: translateY(40px);
+    box-shadow: none;
+}
+
+.footer p {
+    margin: 5px;
+    text-align:center;
+}
+
+.page_about p {
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.contact_form {
+    background-color: rgb(237, 237, 237);
+}
+
+.contact_form h1 {
+    padding-left: 35px;
+    padding-top:10px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+
+.contact_form button{
+    color: white;
+    border: none;
+    width: 100px;
+    height: 45px;
+    border-radius: 5px;
+    background-color:rgb(53, 135, 54);
+    border: 2px solid #777;
+}
+
+.contact_form button:hover {
+    cursor: pointer;
+    color:white;
+    background-color: rgb(25, 67, 26);
+    transition: all 0.3s ease 0s; 
+}
+
+.contact_form {
+    border-radius: 15px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 0 20px 0 rgb(84, 31, 0);
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.contact_form form {
+    margin: 35px;
+}
+
+.contact_form input {
+    margin-top: 10px;
+    width: 430px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid rgb(7, 42, 8);
+}
+.contact_form select {
+    margin-top: 10px;
+    width: 430px;
+    height: 25px;
+    border-radius: 10px;
+    border: 2px solid rgb(7, 42, 8);
+}
+.contact_form textarea {
+    margin-top: 10px;
+    width: 430px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid rgb(7, 42, 8);
+}
+
+
+.contact_form {
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+

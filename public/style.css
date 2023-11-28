@@ -1,0 +1,95 @@
+body{
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgb(255, 235, 220);
+}
+
+table{
+    width: 80%;
+    margin: 40px auto;
+    background: rgb(124,154,167);
+}
+
+table.list{
+    text-align: center;
+    width: 100%;
+}
+
+td{
+    border: 1px solid rgb(204,200,200);
+    text-align: left;
+    padding: 8px 15px;
+}
+
+tr:nth-child(even), table.list thread> tr{
+    background-color: rgb(204,200,200);
+}
+
+input[type="text"],input[type="number"]{
+    width:100%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+
+input[type="submit"],input[type="reset"]{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: #4b99d8;
+}
+
+input[type="reset"]:hover{
+    background: #4b99d8;
+}
+
+button{
+    /* background: rgb(53, 135, 54); */
+    padding:6px 12px;
+    margin:15px 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    
+}
+
+#aboutButton {
+    background-color: rgb(53, 135, 54);
+}
+#aboutButton2 {
+    background-color: rgb(53, 135, 54);
+}
+
+button:hover{
+    background-color: rgb(34, 85, 35);
+}
+
+#food-list {
+    padding-top: 40px;
+    color: rgb(0, 0, 0);
+}
+
+#postButton {
+    background-color: rgb(53, 135, 54); 
+}
+
+p1 {
+    text-align: center;
+    margin: auto;
+}
